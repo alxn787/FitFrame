@@ -1,4 +1,6 @@
+import FeaturesSection from "./components/features";
 import FitnessServices from "./components/fitnessService";
+import Footer from "./components/footer";
 import Navbar from "./components/navbar";
 
 export default function Home() {
@@ -28,9 +30,10 @@ export default function Home() {
       </div>
 
       {/* White Background Section on Scroll */}
-      <div className="bg-[#e4e4e4] min-h-screen flex items-center justify-center text-black text-3xl font-bold">
-        Welcome to the next section!
+      <div className="bg-[#e4e4e4] min-h-screen flex  justify-center text-black text-3xl font-bold">
+        <FeaturesSection/>
       </div>
+      <Footer/>
     </div>
   );
 }
