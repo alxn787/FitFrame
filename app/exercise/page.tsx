@@ -2,7 +2,6 @@
 'use client';
 
 import React from 'react';
-import Header from '../components/Header';
 import WorkoutTracker from '../components/WorkoutTracker';
 
 export default function Home() {
