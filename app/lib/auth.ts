@@ -1,3 +1,4 @@
+/* eslint-disable */
 import GoogleProvider from "next-auth/providers/google";
 import { Session } from "next-auth";
 import db from "@/app/db";

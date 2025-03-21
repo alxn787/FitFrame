@@ -14,7 +14,7 @@ export default function Navbar() {
                 <button onClick={()=>router.push('/dashboard')} className="mx-4 text-base text-gray-200 hover:text-gray-400">Dashboard</button>
                 <button onClick={()=>router.push('/guide')} className="mx-4 text-base text-gray-200  hover:text-gray-400">Guide</button>
                 <button onClick={()=>router.push('/diet')} className="mx-4 text-base text-gray-200  hover:text-gray-400">Diet Plans</button>
-                <button onClick={()=>router.push('/excercise')} className="mx-4 text-base text-gray-200  hover:text-gray-400">Excercise Now</button>
+                <button onClick={()=>router.push('/exercise')} className="mx-4 text-base text-gray-200  hover:text-gray-400">Exercise Now</button>
                 <button onClick={()=>router.push('/diet')} className="mx-4 text-base text-gray-200  hover:text-gray-400">Pricing</button>
             </div>
             <div className="text-2xl flex  items-center justify-center">
