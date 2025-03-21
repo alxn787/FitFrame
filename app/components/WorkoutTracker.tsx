@@ -10,7 +10,7 @@ import { CustomButton } from '@/components/ui/custom-button';
 import { toast } from "sonner";
 import { useIsMobile } from '@/hooks/use-mobile';
 
-// Dynamically import PoseDetector with SSR disabled
+
 const PoseDetector = dynamic(() => import('./PoseDetector'), { 
   ssr: false 
 });
