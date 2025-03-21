@@ -107,7 +107,7 @@ const Dashboard: React.FC = () => {
     // Calculate statistics from workoutSessions
     const maxReps = Math.max(...workoutSessions.map(session => session.totalReps));
     const maxRPM = Math.max(...workoutSessions.map(session => session.maxRepsPerMin));
-    const allReps = workoutSessions.reduce((sum, session) => sum + session.totalReps, 0);
+    // const allReps = workoutSessions.reduce((sum, session) => sum + session.totalReps, 0);
     const allCalories = workoutSessions.reduce((sum, session) => sum + session.calories, 0);
     
     setMaxTotalReps(maxReps);
