@@ -1,6 +1,4 @@
-import FeaturesSection from "./components/features";
 import FitnessServices from "./components/fitnessService";
-import Footer from "./components/footer";
 
 export default function Home() {
   return (
