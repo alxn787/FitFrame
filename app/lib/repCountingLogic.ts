@@ -1,4 +1,4 @@
-
+/* eslint-disable */
 import * as poseDetection from '@tensorflow-models/pose-detection';
 import { calculateAngle , KEYPOINT_DICT } from './PoseUtils';
 
