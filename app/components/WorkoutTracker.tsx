@@ -130,7 +130,7 @@ const WorkoutTracker: React.FC = () => {
   
   return (
     <div className="w-full max-w-6xl mx-auto px-4 py-8 animate-fade-in bg-black text-foreground rounded-xl">
-      <div className="mb-6 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+      <div className="mb-6 flex flex-col md:flex-row md:justify-between md:items-center gap-4 rounded-xl">
         <h2 className="text-2xl font-bold tracking-tight text-white">Bicep Curl Tracker</h2>
         
         <div className="flex space-x-3">
