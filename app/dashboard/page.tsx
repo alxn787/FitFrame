@@ -134,7 +134,7 @@ const Dashboard: React.FC = () => {
           <div>
             <div className="flex items-center gap-2 mb-2">
               <Link href="/">
-                <Button variant="outline" size="icon" className="h-8 w-8">
+                <Button size="icon" className="h-8 w-8">
                   <ArrowLeft size={16} />
                 </Button>
               </Link>
@@ -142,7 +142,7 @@ const Dashboard: React.FC = () => {
             </div>
             <p className="text-muted-foreground">Track your bicep curl performance and progress over time</p>
           </div>
-          <Link href="/">
+          <Link href="/execise">
             <Button className="mt-4 md:mt-0">
               New Workout
             </Button>
