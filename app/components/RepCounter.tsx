@@ -58,7 +58,7 @@ const RepCounter: React.FC<RepCounterProps> = ({
   const labels = getLeftRightLabels();
   
   return (
-    <div className="bg-white rounded-lg shadow-md p-4">
+    <div className="bg-white rounded-xl shadow-md p-4">
       <h3 className="text-lg font-semibold mb-4">{exerciseType} Counter</h3>
       
       <div className="space-y-4">
