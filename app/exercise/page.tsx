@@ -6,7 +6,7 @@ import WorkoutTracker from '../components/WorkoutTracker';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen bg-black flex flex-col">
       <main className="flex-1">
         <div className='h-16'></div>
         <WorkoutTracker />

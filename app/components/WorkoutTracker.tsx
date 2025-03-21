@@ -129,9 +129,9 @@ const WorkoutTracker: React.FC = () => {
   }, [isActive, startTime]);
   
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 py-8 animate-fade-in bg-black text-white text-foreground">
+    <div className="w-full max-w-6xl mx-auto px-4 py-8 animate-fade-in bg-black text-foreground">
       <div className="mb-6 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
-        <h2 className="text-2xl font-bold tracking-tight">Bicep Curl Tracker</h2>
+        <h2 className="text-2xl font-bold tracking-tight text-white">Bicep Curl Tracker</h2>
         
         <div className="flex space-x-3">
           <CustomButton
