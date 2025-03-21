@@ -13,15 +13,12 @@ export default function Home() {
           alt="background"
         />
         <div className="container relative pl-20">
-          <div className="flex justify-between  pt-40">
+          <div className="flex justify-between  pt-40 ml-10">
             <h1 className="fs-64 bg-[radial-gradient(89.47%_51.04%_at_44.27%_50%,_#E2E3E9_0%,_#D4D6DE_52.73%,_#3D3F4C_100%)] bg-clip-text pb-2.5 font-title font-medium text-transparent md:max-w-[600px] md:pb-2.5 md:text-40 sm:text-32 text-5xl">
               Use FitFrame..<br /> & Just fit in the Frame!
             </h1>
-            <h1 className="fs-64 bg-[radial-gradient(89.47%_51.04%_at_44.27%_50%,_#E2E3E9_0%,_#D4D6DE_52.73%,_#3D3F4C_100%)] bg-clip-text pb-2.5 font-title font-medium text-transparent md:max-w-[400px] md:pb-2.5 md:text-40 sm:text-32 pt-20">
-              Empower developers. Engineer excellence.
-            </h1>
           </div>
-          <div className="text-[#9c9eab] md:max-w-[600px] md:pb-2.5 md:text-40 sm:text-32  pt-4">
+          <div className="text-[#9c9eab] md:max-w-[600px] md:pb-2.5 md:text-40 sm:text-32  pt-4 ml-10">
             We help fitness enthusiasts and professionals achieve their health goals with innovative digital solutions.
           </div>
           <FitnessServices/>
@@ -29,10 +26,10 @@ export default function Home() {
       </div>
 
       {/* White Background Section on Scroll */}
-      <div className="bg-[#e4e4e4] min-h-screen flex  justify-center text-black text-3xl font-bold">
+      {/* <div className="bg-[#e4e4e4] min-h-screen flex  justify-center text-black text-3xl font-bold">
         <FeaturesSection/>
-      </div>
-      <Footer/>
+      </div> */}
+      {/* <Footer/> */}
     </div>
   );
 }

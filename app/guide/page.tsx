@@ -71,7 +71,7 @@ function App() {
           {filteredExercises.map((exercise) => (
             <div
               key={exercise.id}
-              className="bg-[#121213]  rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow cursor-pointer p-4"
+              className="bg-[#121213]  rounded-xl shadow-sm overflow-hidden hover:shadow-md  cursor-pointer p-4 hover:scale-[1.03] transition ease-in-out duration-200"
               onClick={() => setSelectedExercise(exercise)}
             >
               <div className="p-4">
