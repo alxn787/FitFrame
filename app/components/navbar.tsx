@@ -8,7 +8,7 @@ export default function Navbar() {
     const router = useRouter();
 
     return (
-        <div className="top-0 z-50  flex justify-between bg-black text-white font-extrabold text-xl px-20 left-0 right-0 absolute  py-3">
+        <div className="top-0 z-50  flex justify-between  text-white font-extrabold text-xl px-20 left-0 right-0 absolute  py-3">
             <div className="text-2xl flex  items-center justify-center"> <span><img src="logo.png" alt="logo" className="w-24 rounded-full" /></span> <button onClick={()=>router.push('/')} >FitFrame</button></div>
             <div className="flex items-center justify-center mr-52">
                 <button onClick={()=>router.push('/dashboard')} className="mx-4 text-base text-gray-200 hover:text-gray-400">Dashboard</button>
