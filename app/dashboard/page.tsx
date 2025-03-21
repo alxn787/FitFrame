@@ -12,7 +12,6 @@ import {
   BarChart,
   Line,
   LineChart,
-  ResponsiveContainer,
   XAxis,
   YAxis,
 } from 'recharts';
@@ -20,9 +19,7 @@ import {
   Trophy,
   TrendingUp,
   ArrowUpRight,
-  Zap,
   Dumbbell,
-  Clock,
   ArrowLeft,
   Flame
 } from 'lucide-react';
@@ -103,7 +100,7 @@ const Dashboard: React.FC = () => {
   const [maxTotalReps, setMaxTotalReps] = useState(0);
   const [maxRepsPerMin, setMaxRepsPerMin] = useState(0);
   const [totalWorkouts, setTotalWorkouts] = useState(0);
-  const [totalReps, setTotalReps] = useState(0);
+//   const [totalReps, setTotalReps] = useState(0);
   const [totalCalories, setTotalCalories] = useState(0);
   
   useEffect(() => {
@@ -116,7 +113,7 @@ const Dashboard: React.FC = () => {
     setMaxTotalReps(maxReps);
     setMaxRepsPerMin(maxRPM);
     setTotalWorkouts(workoutSessions.length);
-    setTotalReps(allReps);
+    // setTotalReps(allReps);
     setTotalCalories(allCalories);
   }, []);
   
