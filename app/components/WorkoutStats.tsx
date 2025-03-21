@@ -35,7 +35,7 @@ const WorkoutStats: React.FC<WorkoutStatsProps> = ({
     : '0.0';
   
   return (
-    <div className="bg-card text-card-foreground rounded-lg shadow-md p-4">
+    <div className="bg-card text-card-foreground rounded-lg shadow-md text-white p-4">
       <h3 className="text-lg font-semibold mb-4">Workout Stats</h3>
       
       <div className="space-y-4">
