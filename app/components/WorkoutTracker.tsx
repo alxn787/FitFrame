@@ -137,17 +137,17 @@ const WorkoutTracker: React.FC = () => {
           <CustomButton
             onClick={toggleWorkout}
             variant={isActive ? "warning" : "primary"}
-            className="flex items-center"
+            className="flex items-center rounded-xl"
             type="button"
           >
             {isActive ? (
               <>
-                <span className="w-4 h-4 mr-2">⏸</span>
+                <span className="w-4 h-4 mr-2 rounded-xl">⏸</span>
                 Pause
               </>
             ) : (
               <>
-                <span className="w-4 h-4 mr-2">▶</span>
+                <span className="w-4 h-4 mr-2 rounded-xl">▶</span>
                 Start
               </>
             )}
@@ -156,10 +156,10 @@ const WorkoutTracker: React.FC = () => {
           <CustomButton
             onClick={resetWorkout}
             variant="secondary"
-            className="flex items-center"
+            className="flex items-center rounded-xl"
             type="button"
           >
-            <span className="w-4 h-4 mr-2">↻</span>
+            <span className="w-4 h-4 mr-2 rounded-xl">↻</span>
             Reset
           </CustomButton>
         </div>
