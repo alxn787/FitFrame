@@ -55,7 +55,7 @@ export default function Navbar() {
                     {session?.user ? (
                         <button className="px-4 py-1.5 lg:px-6 lg:py-2 text-xs  text-white font-semibold bg-[#1a1a1a] rounded-full border border-[#333] shadow-black/50 hover:bg-[#222] transition-all shadow-inner-xl" onClick={() => signOut()}>Sign out</button>
                     ) : (
-                        <button className="px-4 py-1.5 lg:px-6 lg:py-2 text-xs lg:text-sm text-white font-semibold bg-[#1a1a1a] rounded-full border border-[#333] shadow-md shadow-black/50 hover:bg-[#222] transition-all" onClick={() => signIn("google")}>Sign in</button>
+                        <button className="px-4 py-1.5 lg:py-2 text-xs text-white font-semibold bg-[#1a1a1a] rounded-full border border-[#333] shadow-md shadow-black/50 hover:bg-[#222] transition-all" onClick={() => signIn("google")}>Sign in</button>
                     )}
                 </div>
             </div>
