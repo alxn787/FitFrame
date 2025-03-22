@@ -42,7 +42,7 @@ export default function Navbar() {
                 
                 {/* Navigation Options - Visible on all devices */}
                 <div className="flex flex-wrap justify-center w-full mt-4 md:mt-0 md:justify-center md:ml-8 ">
-                    <button onClick={() => router.push('/dashboard')} className="mx-2 my-1 text-sm lg:text-base text-whitehover:text-gray-400">Dashboard</button>
+                    <button onClick={() => router.push('/dashboard')} className="mx-2 my-1 text-sm lg:text-base text-white hover:text-gray-400">Dashboard</button>
                     <button onClick={() => router.push('/guide')} className="mx-2 my-1 text-sm lg:text-base text-white hover:text-gray-400">Guide</button>
                     <button onClick={() => router.push('/diet')} className="mx-2 my-1 text-sm lg:text-base text-white
                      hover:text-gray-400">Diet Plans</button>
