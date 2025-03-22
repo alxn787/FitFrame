@@ -20,7 +20,7 @@ export default function FitnessServices() {
                     <Utensils className="text-purple-400 w-8 h-8 mb-4" />
                     <h3 className="text-lg font-semibold">Diet & Nutrition Plans</h3>
                     <p className="text-gray-400 mt-2">
-                        Personalized meal plans tailored to your fitness goals, ensuring optimal nutrition and performance.
+                        Personalized AI powered meal plans tailored to your fitness goals, ensuring optimal nutrition and performance.
                     </p>
                     <a href="diet" className="text-white font-semibold mt-3 hover:underline">
                         Learn more →
@@ -30,7 +30,7 @@ export default function FitnessServices() {
                     <Activity className="text-orange-400 w-8 h-8 mb-4" />
                     <h3 className="text-lg font-semibold">Live Exercise Tracking</h3>
                     <p className="text-gray-400 mt-2">
-                        Track your workouts in real-time with AI-powered insights, ensuring maximum efficiency.
+                        Track your workouts in real-time with insights with Machine learning models, ensuring maximum efficiency.
                     </p>
                     <a href="excercise" className="text-white font-semibold mt-3 hover:underline">
                         Learn more →
