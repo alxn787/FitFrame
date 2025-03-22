@@ -22,9 +22,9 @@ export default function Navbar() {
                 {/* Logo Section */}
                 <div className="flex justify-between items-center w-full md:w-auto">
                     <div className="text-xl md:text-2xl flex items-center text-white font-extrabold"> 
-                        <span>
+                        {/* <span>
                             <img src="logo.png" alt="logo" className="w-36 rounded-full" />
-                        </span> 
+                        </span>  */}
                         <button onClick={() => router.push('/')}>
                             FitFrame
                         </button>
