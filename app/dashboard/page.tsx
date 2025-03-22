@@ -1,7 +1,7 @@
 "use client";
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link'; 
+import Link from 'next/link';
 import {
   ChartContainer,
   ChartTooltip,
@@ -74,10 +74,10 @@ const StatCard: React.FC<StatCardProps> = ({
   trend, 
   className 
 }) => (
-  <Card className={cn("rounded-xl overflow-hidden border-white/10", className)}>
-    <CardHeader className="flex flex-row items-center justify-between pb-2">
-      <CardTitle className="text-sm font-medium text-muted-foreground">{title}</CardTitle>
-      <div className="h-8 w-8 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+  <Card className={cn("rounded-xl text-white  overflow-hidden glassmorphism-dark", className)}>
+    <CardHeader className="flex flex-row items-center text-white  justify-between pb-2">
+      <CardTitle className="text-sm font-medium text-white text-muted-foreground">{title}</CardTitle>
+      <div className="h-8 w-8 rounded-full bg-primary/20 text-primary flex items-center justify-center">
         {icon}
       </div>
     </CardHeader>
@@ -127,23 +127,23 @@ const Dashboard: React.FC = () => {
   }));
   
   return (
-    <div className="min-h-screen w-full bg-background dark">
+    <div className="min-h-screen w-full bg-black">
         <div className='h-20'></div>
       <div className="container mx-auto px-4 py-8 sm:py-12">
         <header className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <Link href="/">
-                <Button size="icon" className="h-8 w-8">
-                  <ArrowLeft size={16} />
+              <Link href="/dashboard">
+                <Button variant="outline" size="icon" className="h-8 w-8 border-white/10 hover:bg-white/10">
+                  <ArrowLeft className='text-white' size={16} />
                 </Button>
               </Link>
-              <h1 className="text-2xl font-bold">Workout Dashboard</h1>
+              <h1 className="text-2xl font-bold text-white">Workout Dashboard</h1>
             </div>
-            <p className="text-muted-foreground">Track your bicep curl performance and progress over time</p>
+            <p className="text-white/60">Track your bicep curl performance and progress over time</p>
           </div>
-          <Link href="/execise">
-            <Button className="mt-4 md:mt-0">
+          <Link href='/exercise'>
+            <Button className="mt-4 rounded-xl md:mt-0 bg-blue-600 hover:bg-blue-700">
               New Workout
             </Button>
           </Link>
@@ -187,9 +187,9 @@ const Dashboard: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.5 }}
         >
-          <Card className="rounded-xl border-white/10">
+          <Card className="rounded-xl glassmorphism-dark">
             <CardHeader>
-              <CardTitle className="text-lg">Reps Performance</CardTitle>
+              <CardTitle className="text-lg text-white">Reps Performance</CardTitle>
             </CardHeader>
             <CardContent className="h-80">
               <ChartContainer config={chartConfig}>
@@ -205,9 +205,9 @@ const Dashboard: React.FC = () => {
             </CardContent>
           </Card>
           
-          <Card className="rounded-xl border-white/10">
+          <Card className="rounded-xl glassmorphism-dark">
             <CardHeader>
-              <CardTitle className="text-lg">Reps Per Minute</CardTitle>
+              <CardTitle className="text-lg text-white">Reps Per Minute</CardTitle>
             </CardHeader>
             <CardContent className="h-80">
               <ChartContainer config={chartConfig}>
@@ -236,13 +236,13 @@ const Dashboard: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          <Card className="rounded-xl border-white/10">
+          <Card className="rounded-xl glassmorphism-dark">
             <CardHeader>
-              <CardTitle className="text-lg">Recent Workout Sessions</CardTitle>
+              <CardTitle className="text-lg text-white">Recent Workout Sessions</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="overflow-x-auto">
-                <table className="w-full text-sm">
+                <table className="w-full text-sm text-white/90">
                   <thead>
                     <tr className="border-b border-white/10">
                       <th className="text-left py-3 px-4">Date</th>
