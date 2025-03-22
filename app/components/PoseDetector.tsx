@@ -17,27 +17,24 @@ const PoseDetector: React.FC<PoseDetectorProps> = ({ onPoseDetected, isActive })
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   
-  // Initialize the TensorFlow.js and PoseDetection
+
   useEffect(() => {
     async function initializeDetector() {
       try {
         setIsLoading(true);
         console.log("Initializing TensorFlow and detector...");
-        
-        // Dynamically import TensorFlow.js and PoseDetection to avoid SSR issues
+
         const tf = await import('@tensorflow/tfjs');
         const poseDetection = await import('@tensorflow-models/pose-detection');
         
-        // Load TensorFlow.js backends
         await tf.ready();
         await tf.setBackend('webgl');
         console.log("TensorFlow backend set:", tf.getBackend());
         
-        // Create a detector using MoveNet
         detectorRef.current = await poseDetection.createDetector(
-            poseDetection.SupportedModels.MoveNet, // ✅ Correct model reference
+            poseDetection.SupportedModels.MoveNet, 
             {
-              modelType: poseDetection.movenet.modelType.SINGLEPOSE_LIGHTNING, // ✅ Correct MoveNet model
+              modelType: poseDetection.movenet.modelType.SINGLEPOSE_LIGHTNING,
               enableSmoothing: true, // ✅ Optional
             }
           );          
@@ -60,7 +57,7 @@ const PoseDetector: React.FC<PoseDetectorProps> = ({ onPoseDetected, isActive })
     
     initializeDetector();
     
-    // Cleanup function
+
     return () => {
       if (requestAnimationFrameRef.current) {
         cancelAnimationFrame(requestAnimationFrameRef.current);
@@ -69,7 +66,7 @@ const PoseDetector: React.FC<PoseDetectorProps> = ({ onPoseDetected, isActive })
     };
   }, []);
   
-  // Start webcam
+
   useEffect(() => {
     async function setupCamera() {
       if (!videoRef.current) return;
@@ -88,7 +85,6 @@ const PoseDetector: React.FC<PoseDetectorProps> = ({ onPoseDetected, isActive })
         console.log("Camera access granted");
         videoRef.current.srcObject = stream;
         
-        // Make sure video metadata is loaded before proceeding
         if (videoRef.current.readyState < 2) {
           await new Promise<void>((resolve) => {
             if (videoRef.current) {
@@ -107,7 +103,6 @@ const PoseDetector: React.FC<PoseDetectorProps> = ({ onPoseDetected, isActive })
     
     setupCamera();
     
-    // Cleanup function for webcam stream
     return () => {
       if (videoRef.current && videoRef.current.srcObject) {
         const tracks = (videoRef.current.srcObject as MediaStream).getTracks();
@@ -116,15 +111,12 @@ const PoseDetector: React.FC<PoseDetectorProps> = ({ onPoseDetected, isActive })
     };
   }, []);
   
-  // Setup canvas sizing to match video
   useEffect(() => {
     function resizeCanvas() {
       if (!videoRef.current || !canvasRef.current) return;
       
       const video = videoRef.current;
       const canvas = canvasRef.current;
-      
-      // Set canvas size to match video dimensions
       canvas.width = video.videoWidth || 640;
       canvas.height = video.videoHeight || 480;
       console.log("Canvas resized to:", canvas.width, "x", canvas.height);
@@ -141,8 +133,7 @@ const PoseDetector: React.FC<PoseDetectorProps> = ({ onPoseDetected, isActive })
       }
     };
   }, []);
-  
-  // Pose detection loop
+
   useEffect(() => {
     if (!isActive) {
       if (requestAnimationFrameRef.current) {
@@ -159,35 +150,29 @@ const PoseDetector: React.FC<PoseDetectorProps> = ({ onPoseDetected, isActive })
       }
       
       try {
-        // Only detect if video is playing and has loaded
         if (videoRef.current.readyState >= 2) {
           // Detect pose
           const poses = await detectorRef.current.estimatePoses(videoRef.current);
           const pose = poses.length > 0 ? poses[0] : null;
           
-          // Draw the pose on canvas
           const ctx = canvasRef.current.getContext('2d');
           if (ctx) {
-            // Clear previous drawings
             ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
             
             if (pose) {
               drawPose(pose, ctx);
             }
           }
-          
-          // Callback with detected pose
+
           onPoseDetected(pose);
         }
       } catch (err) {
         console.error('Error during pose detection:', err);
       }
       
-      // Continue the detection loop
       requestAnimationFrameRef.current = requestAnimationFrame(detectPose);
     }
     
-    // Start the detection loop
     if (!requestAnimationFrameRef.current) {
       console.log("Starting pose detection loop");
       requestAnimationFrameRef.current = requestAnimationFrame(detectPose);
