@@ -47,7 +47,7 @@ export default function Navbar() {
                     <button onClick={() => router.push('/diet')} className="mx-5 my-1 text-sm lg:text-base text-white
                      hover:text-gray-400">Diet Plans</button>
                     <button onClick={() => router.push('/exercise')} className="mx-5 my-1 text-sm lg:text-base text-white hover:text-gray-400">Exercise</button>
-                    <button onClick={() => router.push('/diet')} className="mx-5 my-1 text-sm lg:text-base text-white hover:text-gray-400">Pricing</button>
+                    <button onClick={() => router.push('/')} className="mx-5 my-1 text-sm lg:text-base text-white hover:text-gray-400">Pricing</button>
                 </div>
                 
                 {/* Sign In/Out Button for desktop */}

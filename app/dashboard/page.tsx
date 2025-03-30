@@ -74,7 +74,7 @@ const StatCard: React.FC<StatCardProps> = ({
   trend, 
   className 
 }) => (
-  <Card className={cn("rounded-xl text-white  overflow-hidden glassmorphism-dark", className)}>
+  <Card className={cn("rounded-xl text-white  overflow-hidden glassmorphism-dark border-white/50", className)}>
     <CardHeader className="flex flex-row items-center text-white  justify-between pb-2">
       <CardTitle className="text-sm font-medium text-white text-muted-foreground">{title}</CardTitle>
       <div className="h-8 w-8 rounded-full bg-primary/20 text-primary flex items-center justify-center">
@@ -150,7 +150,7 @@ const Dashboard: React.FC = () => {
         </header>
         
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8 "
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -187,7 +187,7 @@ const Dashboard: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.5 }}
         >
-          <Card className="rounded-xl glassmorphism-dark">
+          <Card className="rounded-xl glassmorphism-dark border-white/50">
             <CardHeader>
               <CardTitle className="text-lg text-white">Reps Performance</CardTitle>
             </CardHeader>
@@ -205,7 +205,7 @@ const Dashboard: React.FC = () => {
             </CardContent>
           </Card>
           
-          <Card className="rounded-xl glassmorphism-dark">
+          <Card className="rounded-xl glassmorphism-dark border-white/50">
             <CardHeader>
               <CardTitle className="text-lg text-white">Reps Per Minute</CardTitle>
             </CardHeader>
@@ -236,7 +236,7 @@ const Dashboard: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          <Card className="rounded-xl glassmorphism-dark">
+          <Card className="rounded-xl glassmorphism-dark border-white/50">
             <CardHeader>
               <CardTitle className="text-lg text-white">Recent Workout Sessions</CardTitle>
             </CardHeader>
